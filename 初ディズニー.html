@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ブログ | 初ディズニー</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/base.css" media="all">
+		<link rel="stylesheet" href="css/style_5.css" media="all">
+		<script>
+			onload = function() {
+				var canvas = document.getElementById('logo');
+				if(!canvas || !canvas.getContext){
+					return false;
+				}
+				var c = canvas.getContext('2d');
+				c.beginPath();
+				c.arc(20,20,20,0,Math.PI*2,false);
+				c.fillStyle = '#FFCC99';
+				c.fill();
+				
+				c.beginPath();
+				c.fillStyle = '#FF00FF'; 
+				c.arc(20, 20, 15, 0, Math.PI, false);
+				c.fill();
+				
+				c.beginPath();
+				c.arc(11,12,3,0,Math.PI*2,false);
+				c.fillStyle = '#000000';
+				c.fill();
+				
+				c.beginPath();
+				c.arc(28,12,3,0,Math.PI*2,false);
+				c.fillStyle = '#000000';
+				c.fill();
+			};
+		</script>
+		
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<title>マウスストーカー</title>
+		<style type="text/css"></style>
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.slider').bxSlider({
+					auto: true,
+					pause: 5000,
+				});
+			});
+		</script>
+		<body>
+			<script type="text/javascript">
+				(function() {
+					var mga="images/f.gif";
+					var hx=30
+					var hy=30;
+					var moj=["●"];
+					var fsz=["10px","20px","30px","40px"];
+					var Clrs=["#fff","#ccf","#fff","#9ff"];
+					var no=10;
+					var spd=0;
+					var opa=0.999;
+					var bhx=25;
+					var bhy=25;
+					var snowcss="text-shadow: 0px 0px 2px #000;";
+					function $(id) {
+						return document.getElementById(id);
+					}
+					var dx=[], xp=[], yp=[];
+					var am=[], stx=[], sty=[];
+					var i, w, h;
+					var n=9;
+					var myx=[],myy=[];
+					for(i=1; i<( no+1); i++) {
+						document.write("<div id='dot"+i+"' style='position:absolute; display:none; top:0; left:0; opacity:"+opa+"; font-size:"+fsz[(i-1)%fsz.length]+"; color:"+Clrs[(i-1)%Clrs.length]+";"+snowcss+"'>"+moj[(i-1)%moj.length]+"</div>");
+					}
+					document.write("<img id='Mo' src='"+mga+"' style='left:-100px; position:absolute; top:-100px;'>");
+					document.onmousemove=function(e){
+						xp[0]=e.pageX;yp[0]=e.pageY;myx[0]=e.pageX;myy[0]=e.pageY;
+					}
+					w=window.innerWidth;
+					h=window.innerHeight;
+					for(i=1; i<(no+1); i++) {
+						dx[i] = 0;
+						xp[i] = 60+Math.random()*(w-50);
+						yp[i] = 30+Math.random()*(h-10);
+						am[i] = Math.random()*20;
+						stx[i] = 0.2 + Math.random()/10;
+						sty[i] = 4 + Math.random();
+					}
+					function star() {
+						for(i=1; i<(no+1); i++) {
+							var lay=$("dot"+i).style;
+							yp[i] -= sty[i];
+							if(yp[i] <30) {
+								xp[i] = xp[0]; yp[i] = yp[0];
+								stx[i] = 0.2 + Math.random()/10; sty[i] = 4 + Math.random();
+								if(yp[i]<30) {lay.display="none";
+								} else if(yp[i]>=30) {lay.display="block";
+								}
+							}
+							dx[i] += stx[i];
+							lay.top=yp[i]+bhy+"px";
+							lay.left=xp[i]+am[i]*Math.sin(dx[i])+bhx+"px";
+						}
+						for (i=n;i>0;i--) {
+							myx[i]=myx[i-1];
+							myy[i]=myy[i-1];
+						}
+						$("Mo").style.left=myx[n]+hx+"px";
+						$("Mo").style.top=myy[n]+hy+"px";
+						setTimeout(star, spd);
+					}
+					star();
+				}());
+			</script>
+		</body>
+	</head>
+
+	<body itemscope itemtype="http://schema.org/WebPage">	
+		<div id="container">
+			<header id="page_header">
+				<hgroup>
+					<div class="sample">
+						<a href="file:///C:\Users\a\Desktop\HTML5\HOME.html" class="shiny-btn1">
+						<link rel="stylesheet" href="style_5.css" type="text/css">
+						<img src="images/ロゴ.png" alt="title" width="1100" height="300">
+					</div>
+				</hgroup>
+			</header>
+			
+			<div id="content" class="clearfix">
+				<div id="main_content">
+					<article itemscope="" itemtype="http://schema.org/BlogPosting">
+						<header>
+							<h1 itemprop="name" class="title_momo"><a href="file:///C:\Users\a\Desktop\HTML5\初ディズニー.html">初ディズニー</a></h1>
+							<p class="post_date"><time itemprop="datePublished" datetime="2020-09-01"></time></p>
+							</header>
+						<div itemprop="articleBody">
+							<section class="blog">
+								<figure class="blog_photo">
+									<img itemprop="image" src="images/puffer-6.jpg" height="256" width="526" alt="photo"><br>
+								</figure>
+								<p class="main">
+									<strong>初めてディズニーリゾートに来ました(^^)</strong><br>
+									<br>
+									<br>
+									JR舞浜駅で降りてから園内へ向かったんですが、<br>
+									駅前もそうだし、周辺の雰囲気も既に夢の国へ誘われてるかの様な、非日常的でワクワクしたのを覚えてますwwwww
+								</p>
+								<figure class="blog_photo">
+									<img itemprop="image" src="images/disney2.jpg" height="300" width="500" alt="photo"><br>
+									<img itemprop="image" src="images/disney6.jpg" height="300" width="400" alt="photo"><br>
+								</figure>
+								<p class="main">
+									歩いていると、有名な園内のホテルが並んで建っているのが視界に入り、「とうとう目の前まで来たんだ！」と一気に緊張してました。<br>
+									そして、入園ゲート前で入場列に並んでいると、男性の流暢な英語のアナウンスが聞こえて、よくモノマネで使われてる元ネタのヤツだと分かりました(笑)
+									<br>
+									・・・で、いざ上陸！！<br>
+									<figure class="blog_photo">
+										<img itemprop="image" src="images/disney4.jpg" height="300" width="500" alt="photo"><br>
+									</figure>
+								</p>
+								<p class="main">
+									うわぁっスゴイ！！！<br>
+									お土産屋さんがいっぱい並んでて、家族連れ・カップル・ソロ活動・・・いろんな人がいろんな楽しみ方をしてる、ダイバーシティを具現化したような、華やかで楽しそうで魅力がいっぱい詰まってるのが一目ですぐに分かりました！<br>
+									<figure class="blog_photo">
+										<img itemprop="image" src="images/disney5.jpg" height="300" width="500" alt="photo"><br>
+									</figure>
+								</p>
+								<p class="main">
+									そのまま、大通りを直進すると・・・・・
+									<br>
+									<br>
+									<br>
+									<br>
+									<strong>続きは明日の投稿へ</strong>
+								</p>
+								<address>また行ってみたいなぁ～夢見る国
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6301.226037037944!2d139.88583622596883!3d35.62937973510805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187d19d0d3a2cd%3A0xda29db8ad489735f!2z5p2x5Lqs44OH44Kj44K644OL44O844Oq44K-44O844OI!5e0!3m2!1sja!2sjp!4v1588855415299!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								</a></address>
+							</section>
+						</div>
+						<footer>
+							<dl class="category clearfix">
+								<dt>Theme：</dt>
+								<dd><a href="file:///C:\Users\a\Desktop\HTML5\Theme.html">感動</a></dd>
+							</dl>
+						</footer>
+						<footer>
+							<p><small>Copyright©2020 OK!!. All Rights Reserved.</small></p>
+						</footer>
+					</article>
+				</div>
+				
+				<aside id="side_contents">
+					<section class="profile">
+						<h1>とりあえずのプロフ</h1>
+						<p>
+							初めまして！<br>
+							ここでは、いろんな発見とか心を動かされたものを、<br>
+							紹介させていただければと思います★
+						</p>
+					</section>
+					<section class="archive">
+						<h1>Recent Entries</h1>
+						<details>
+							<summary>Recent Entries</summary>
+							<ul>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\スゴイ景色.html">スゴイ景色💛</a></li>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\初ディズニーその3.html">初ディズニーその3</a></li>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\初ディズニーその2.html">初ディズニーその2</a></li>
+								<li><a href="#初ディズニー">初ディズニー</a></li>
+							</ul>
+						</details>
+					</section>
+					<section class="archive">
+						<h1>Archives</h1>
+						<details>
+							<summary>Archives</summary>
+							<ul>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\Archives202001.html">2020年01月（01）</a></li>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\Archives201909.html">2019年09月（03）</a></li>
+							</ul>
+						</details>
+					</section>
+					<section class="archive">
+						<h1>Theme</h1>
+						<details>
+							<summary>Theme</summary>
+							<ul>
+								<li><a href="file:///C:\Users\a\Desktop\HTML5\Theme.html">感動</a></li>
+							</ul>
+						</details>
+					</section>
+				</aside>
+			</div>
+		</div>
+	</body>
+</html>
