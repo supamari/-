@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background: #F4FFD2 url(../images/MM_1494.jpg);
+	background: #F4FFD2 url(https://supamari.github.io/portfolio/MM_1494.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	line-height: 1.3;
@@ -106,7 +106,7 @@ nav li a {
 }
 
 .title_kari {
-	background: url(../images/bg_post_title.png) no-repeat left top;
+	background: url(https://supamari.github.io/portfolio/bg_post_title.png) no-repeat left top;
 	height: 60px;
 	margin: 60px 0 0 -20px;
 	padding: 6px 0 0 20px;
@@ -115,7 +115,7 @@ nav li a {
 }
 
 .title_momo {
-	background: url(../images/bg_post_title2.png) no-repeat left top;
+	background: url(https://supamari.github.io/portfolio/bg_post_title2.png) no-repeat left top;
 	height: 60px;
 	margin: 60px 0 0 -20px;
 	padding: 6px 0 0 20px;
@@ -255,7 +255,7 @@ nav li a {
 }
 
 .archive h1 {
-	background: url(../images/bg_aside_title.png) no-repeat left top;
+	background: url(https://supamari.github.io/portfolio/bg_aside_title.png) no-repeat left top;
 	width: 290px;
 	height: 62px;
 	margin: 30px 0 0 0;
@@ -270,7 +270,7 @@ nav li a {
 }
 
 #interest li {
-	background: url(../images/ico_star.png) no-repeat left top;
+	background: url(https://supamari.github.io/portfolio/ico_star.png) no-repeat left top;
 	padding: 0 0 0 20px;
 	margin: 5px 0 0 0;
 }
@@ -284,7 +284,7 @@ nav li a {
 }
 
 .archive li {
-	background: url(../images/ico_file.png) no-repeat left top;
+	background: url(https://supamari.github.io/portfolio/ico_file.png) no-repeat left top;
 	padding: 0 0 0 20px;
 	margin: 5px 0 0 0;
 }
